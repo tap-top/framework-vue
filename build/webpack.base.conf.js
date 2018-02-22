@@ -3,6 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const vuxLoader = require('vux-loader')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -90,3 +91,12 @@ module.exports = {
     child_process: 'empty'
   }
 }
+
+// 这里需要在原配置之后
+// 原来的 module.exports 代码赋值给变量 webpackConfig
+const webpackConfig = module.exports
+module.exports = vuxLoader.merge(webpackConfig,
+  {
+    plugins: ['vux-ui','inline-manifest']
+  }
+)

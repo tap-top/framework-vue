@@ -40,3 +40,9 @@
     npm run build  
 
   > *注意* 编译成功的文件在项目根目录下的dist文件夹
+
+
+####上传到github，根据这篇教程[点我查看](http://blog.csdn.net/dkbnull/article/details/61414350)
+
+
+至此第一个最简版的vue demo 建立完成，撒花

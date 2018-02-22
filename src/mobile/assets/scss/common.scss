@@ -1,0 +1,30 @@
+@function px2rem($px, $base-font-size: 37.5px) {
+  @return ($px / $base-font-size) * 1rem;
+}
+$Color:#529FF7;
+$BgColor: #F0EFF3;
+$GrayColor: #A9A1AF;
+$RedColor: #F25772;
+
+$WordGrayColor: #B3BFCA;
+
+// 按钮primary颜色统一为蓝色
+/deep/ .weui-btn_primary{
+  background-color: $Color;
+  &:not(.weui-btn_disabled):active {
+    color:#EEE;
+    background-color: #62AFF7
+  }
+}
+/deep/ .weui-btn_plain-primary{
+  color: $Color;
+  border: 1px solid $Color;
+}
+// 统一tab颜色
+/deep/ .vux-tab .vux-tab-item.vux-tab-selected{
+  color:$Color;
+  border-bottom: 3px solid $Color;
+}
+/deep/ .vux-tab-bar-inner{
+  background-color: $Color;
+}
